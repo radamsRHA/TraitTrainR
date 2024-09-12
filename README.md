@@ -1,7 +1,7 @@
 
 ---
 # TraitTrainR: Undertanding trait evolution with flexible, large-scale simulations of complex models
-**NOTE See the file https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_Command_Manual.pdf for detailed instructions on functions**
+**NOTE See the file [https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_CommandManual.pdf](https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_CommandManual.pdf) for detailed instructions on functions**
 **NOTE See the file https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_TutorialManual.pdf for detailed example Run**
 
 ## NOTE: This README serves as a quick start guide. Please see the above tutorial files for more indepth instructions and details of options and implementation
