@@ -37,7 +37,7 @@ MySimulationResults <- TraitTrain(handle.Phylogeny = MyTree,
   
   
   
-## Step 1: Installing R package TraitTrainR from github
+## Step 0: Installing R package TraitTrainR from github
 The R package TraitTrainR is freely available to download and distribute from github <https://github.com/radamsRHA/TraitTrainR/>. To install and load TraitTrainR, you must first install the R package `devtools`, 
 
 
