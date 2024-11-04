@@ -1,13 +1,43 @@
 
 ---
 # TraitTrainR: Undertanding trait evolution with flexible, large-scale simulations of complex models
-**NOTE See the file https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_Command_Manual.pdf for detailed instructions on functions**
+**NOTE See the file [https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_CommandManual.pdf](https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_CommandManual.pdf) for detailed instructions on functions**
 **NOTE See the file https://github.com/radamsRHA/TraitTrainR/blob/main/TraitTrainR_TutorialManual.pdf for detailed example Run**
 
 ## NOTE: This README serves as a quick start guide. Please see the above tutorial files for more indepth instructions and details of options and implementation
 ## NOTE: TraitTrainR was written in R 4.4.0 ("Puppy cup") and we recommend that version or later for installing TraitTrainR
 
-## Installing R package TraitTrainR from github
+## QUICK START CODE: simulate under Brownian Motion and Ornstein–Uhlenbeck models (see next section for more detailed information):
+```
+library(TraitTrainR); library(phytools); library(geiger) 
+
+MyTree <- read.tree(text = "((A:1, B:1):1, C:2);") 
+list.SimulationModelSettings <- list() 
+NumberOfReps <- 5  
+list.Rmatrix <- list(); for (i in 1:NumberOfReps){list.Rmatrix[[i]] <- matrix(1, nrow = 1, ncol = 1)}
+
+list.SimulationModelSettings[[1]] <- list(string.SimulationModel = "BM", 
+                                          vector.Sig2 = rexp(n = NumberOfReps, rate = 1), 
+                                          vector.AncestralState = rep(1, NumberOfReps), 
+                                          list.Rmatrix = list.Rmatrix)
+
+list.SimulationModelSettings[[2]] <- list(string.SimulationModel = "OU", 
+                            vector.Sig2 = rexp(n = NumberOfReps, rate = 1), 
+                            vector.AncestralState = rnorm(NumberOfReps),
+                            vector.Alpha = runif(n = NumberOfReps, min = exp(-500), max = exp(1)),
+                            list.Rmatrix = list.Rmatrix)
+
+MySimulationResults <- TraitTrain(handle.Phylogeny = MyTree,
+                       list.SimulationModelSettings = list.SimulationModelSettings,
+                       logical.PIC = TRUE, logical.PROJECT = TRUE)
+```
+
+  
+    
+  
+  
+  
+## Step 0: Installing R package TraitTrainR from github
 The R package TraitTrainR is freely available to download and distribute from github <https://github.com/radamsRHA/TraitTrainR/>. To install and load TraitTrainR, you must first install the R package `devtools`, 
 
 
