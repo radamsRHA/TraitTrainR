@@ -1,0 +1,12 @@
+Package: TraitTrainR
+Title: Accelerating large-scale simulation under models of continuous trait evolution
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Jenniffer", "Roa Lozano", , "jr130@uark.edu", role = c("aut")),
+    person("Rich", "Adams", , "adamsrh@uark.edu", role = c("aut", "cre")))
+Description: TraitTrainR is an integrative R package designed to facilitate efficient and organized simulations under phylogenetic models of continuous trait evolution. Please see the associated manual and help files for additional information. Please contact the authors for any and all questions.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: geiger (>= 2.0.11), phytools (>= 2.3.0), ape (>= 5.8)
